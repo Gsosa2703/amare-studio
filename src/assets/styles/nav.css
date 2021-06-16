@@ -1,0 +1,8 @@
+.MuiToolbar-gutters {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+}
+
+.MuiPaper-elevation4{
+    box-shadow: none !important;
+}

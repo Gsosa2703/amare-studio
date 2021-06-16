@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/styles/main.css'
+import './assets/styles/nav.css'
+import Navbar from './components/Nav'
+import Hero from './components/Hero'
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+   // fake authentication Promise
+  authenticate(){
+    return new Promise(resolve => setTimeout(resolve, 1000)) // 2 seconds
+  }
+
+  componentDidMount(){
+    this.authenticate().then(() => {
+      const ele = document.getElementById('ipl-progress-indicator')
+      if(ele){
+        // fade out
+        ele.classList.add('available')
+        setTimeout(() => {
+          // remove from DOM
+          ele.outerHTML = ''
+        }, 1000)
+      }
+    })
+  }
+  render() {
+      return (
+        <div className="App">
+          <Navbar />
+          <Hero />
+          
+        </div>
+      );
+  }
 }
 
 export default App;

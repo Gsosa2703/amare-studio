@@ -1,0 +1,39 @@
+/* GLOBAL FONTS */
+@font-face {
+    font-family: "Sofia";
+    src: url("../fonts/Sofia/Sofia\ Pro\ Regular\ Az.otf");
+  }
+
+  @font-face {
+    font-family: "Roxbo";
+    src: url("../fonts/Roxborough.CF/RoxboroughCF-Regular.ttf");
+  }
+
+
+.App{
+  margin-top: 64px;
+  overflow: hidden;
+  position: relative;
+}
+  
+  .makeStyles-menuItem-4:hover{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: aqua;
+  }
+  .tween{
+    opacity:1;
+  }
+
+  /*ANIMATIONS */
+[data-aos="another"] {
+  opacity: 1;
+  transition-property: transform, opacity;
+
+
+
+}
+
+  [data-aos="another"].aos-animate {
+    opacity:0;
+  }
